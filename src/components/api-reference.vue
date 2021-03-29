@@ -1,6 +1,8 @@
 <template>
   <div>
     <h1>Vue Api references</h1>
+    <p>{{a}}</p>
+    <button type="button" name="button" v-on:click="increase">count</button>
   </div>
 </template>
 
@@ -24,6 +26,7 @@ export default {
     // top-level property name
     this.$watch('a', (newVal, oldVal) => {
       // do something
+      console.log('This is new val', newVal, 'This is old val', oldVal)
     })
 
     // function for watching a single nested property
@@ -31,6 +34,7 @@ export default {
       () => this.c.d,
       (newVal, oldVal) => {
         // do something
+        console.log('function for watching a single nested property:','This is new val', newVal, 'This is old val', oldVal)
       }
     )
 
@@ -41,9 +45,16 @@ export default {
       // property without defining the computed property itself
       () => this.a + this.b,
       (newVal, oldVal) => {
-        // do something
+        console.log('function for watching a complex expression:','This is new val', newVal, 'This is old val', oldVal)
       }
     )
+  },
+  methods: {
+    increase(){
+      if(this.a <= 5) {
+        this.a += 1
+      }
+    }
   }
 }
 </script>

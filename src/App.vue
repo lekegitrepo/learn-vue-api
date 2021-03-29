@@ -1,15 +1,15 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <ApiReference msg="Welcome to Your Vue.js App"/>
 </template>
 
 <script>
-import HelloWorld from './components/project.vue'
+import ApiReference from './components/api-reference.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ApiReference
   }
 }
 </script>
