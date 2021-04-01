@@ -19,7 +19,11 @@ export default {
       c: {
         d: 3,
         e: 4
-      }
+      },
+      article: {
+        text: 'Vue is awesome!'
+      },
+      comments: ['Indeed!', 'I agree']
     }
   },
   created() {
