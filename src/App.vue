@@ -1,17 +1,35 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <ApiReference msg="Welcome to Your Vue.js App"/>
+  <img alt="Vue logo" src="./assets/logo.png" />
+  <ApiReference msg="Welcome to Your Vue.js App" />
 </template>
 
 <script>
-import ApiReference from './components/api-reference.vue'
+import ApiReference from "./components/api-reference.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    ApiReference
-  }
-}
+    ApiReference,
+  },
+  data() {
+    return {
+      items: [
+        {
+          src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg",
+        },
+        {
+          src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg",
+        },
+        {
+          src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg",
+        },
+        {
+          src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style>
