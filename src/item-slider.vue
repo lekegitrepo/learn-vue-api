@@ -15,7 +15,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    colors: {
+      type: Array,
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped></style>
